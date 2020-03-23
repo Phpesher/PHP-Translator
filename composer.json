@@ -1,0 +1,23 @@
+{
+    "name": "phpesher/php-translator",
+    "description": "Simple open-source libary",
+    "type": "libary",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Phpesher ( Nikita )",
+            "email": "superduperproger@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "support": {
+        "email": "superduperproger@gmail.com"
+    },
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/"
+        }
+    }
+}
