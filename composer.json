@@ -1,6 +1,5 @@
 {
     "name": "phpesher/php-translator",
-    "version": "0.1",
     "description": "Simple open-source libary",
     "type": "libary",
     "license": "MIT",

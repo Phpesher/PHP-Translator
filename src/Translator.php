@@ -18,7 +18,7 @@ class Translator
     /**
      * @author Nikita ( Phpesher )
      */
-    private const APP_VERSION = '0.1';
+    private const APP_VERSION = '1.4';
 
     /**
      * Keep you Yandex secret key
