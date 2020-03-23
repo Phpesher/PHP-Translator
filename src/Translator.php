@@ -8,7 +8,7 @@ use SimpleXMLElement;
  * Class Translator
  * @package PHPTranslator\src
  * @author Nikita ( Phpesher )
- * @see
+ * @see https://github.com/Phpesher/PHP-Translator
  * @license MIT
  * @api
  * @version 0.1
@@ -45,13 +45,14 @@ class Translator
      * @param $lFirst ( What language of translation )
      * @param $lSecond ( What language to translate )
      * @param $text
+     * @param bool $getString
      * @return SimpleXMLElement
      * @throws TranslatorException
      * @author Nikita ( Phpesher )
      */
-    public function translateText( $lFirst, $lSecond, $text )
+    public function translateText( $lFirst, $lSecond, $text, $getString = true )
     {
-        if ( ! empty ( $lFirst ) && ! empty ( ! $lSecond ) )
+        if ( ! empty ( $lFirst ) && ! empty ( $lSecond ) )
         {
             if ( ! empty ( $text ) )
             {
@@ -64,10 +65,14 @@ class Translator
                 // And get result
                 $result = simplexml_load_file( $url );
 
-                if ( ! empty ( $result ) )
+                if ( $result instanceof SimpleXMLElement )
                 {
-                    // Return result ( SimpleXMLElement )
-                    return $result;
+                    if ( $getString === true )
+                    {
+                        return $result->text;
+                    } else {
+                        return $result;
+                    }
                 } else {
                     throw new TranslatorException('Something went wrong!' );
                 }

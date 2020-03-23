@@ -10,14 +10,15 @@
         }
     ],
     "require": {
-        "php": ">=7.1"
+        "php": ">=7.1",
+        "ext-simplexml": "*"
     },
     "support": {
         "email": "superduperproger@gmail.com"
     },
     "autoload": {
         "psr-4": {
-            "src\\": "src/"
+            "PHPTranslator\\src\\": "src/"
         }
     }
 }
