@@ -1,5 +1,6 @@
 {
     "name": "phpesher/php-translator",
+    "version": "0.1",
     "description": "Simple open-source libary",
     "type": "libary",
     "license": "MIT",
@@ -10,7 +11,7 @@
         }
     ],
     "require": {
-        "php": ">=7.0.0"
+        "php": ">=7.1"
     },
     "support": {
         "email": "superduperproger@gmail.com"
