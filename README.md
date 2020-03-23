@@ -7,8 +7,15 @@ composer require phpesher/php-translator
 
 # Using
 ```php
-$translator = new Translator('you yandex key');
-$res = $translator->translateText( 'ru', 'en', 'Привет, мир!' )
+require_once '../vendor/autoload.php';
 
-print_r($res);
+use PHPTranslator\src\Translator;
+
+$translator = new Translator('YOU KEY');
+
+try {
+    echo $translator->translateText( 'ru', 'en', 'Яблоки у бабушки на даче были очень вкусные!' );
+} catch ( \PHPTranslator\src\TranslatorException\TranslatorException $e ) {
+    echo $e->getMessage();
+}
 ```
